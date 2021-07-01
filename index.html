@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dojo Weather</title>
+</head>
+
+<body>
+    <header class="parent">
+        <div id="navigation" class="parent">
+            <h1>Dojo Weather</h1>
+            <nav>
+                <ul>
+                    <li><a href="#"><span onclick="loadWeatherReport(this)">Belmopan</span></a></li>
+                    <li><a href="#"><span onclick="loadWeatherReport(this)">Mexico City</span></a></li>
+                    <li><a href="#"><span onclick="loadWeatherReport(this)">San Jose</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--END navigation-->
+    </header>
+    <div id="main-container" class="parent">
+        <div id="top-bar" class="parent">
+            <h2>Uvita</h2>
+            <div id="temperature-container">
+                <p>show temperature in</p>
+                <select onchange="changeUnit(this)" name="switch-temp" id="unit-choice">
+                    <option value="C">°C</option>
+                    <option value="F">°F</option>
+                </select>
+            </div>
+        </div>
+        <div id="weekdays-container" class="parent">
+            <div class="day-temps" id="today">
+                <h3>Today</h3>
+                <img src="./imgs/some_sun.png" alt="sunny weather symbol">
+                <h4>some sun</h4>
+                <div class="temp-bar-bottom parent">
+                    <h5 class="temps temp-high">24</h5>
+                    <h5 class="temps temp-low">18</h5>
+                </div>
+            </div>
+            <div class="day-temps" id="tomorrow">
+                <h3>Tomorrow</h3>
+                <img src="./imgs/some_rain.png" alt="rainy weather symbol">
+                <h4>some rain</h4>
+                <div class="temp-bar-bottom parent">
+                    <h5 class="temps temp-high">24</h5>
+                    <h5 class="temps temp-low">18</h5>
+                </div>
+            </div>
+            <div class="day-temps" id="friday">
+                <h3>Friday</h3>
+                <img src="./imgs/some_clouds.png" alt="cloudy weather symbol">
+                <h4>some clouds</h4>
+                <div class="temp-bar-bottom parent">
+                    <h5 class="temps temp-high">24</h5>
+                    <h5 class="temps temp-low">18</h5>
+                </div>
+            </div>
+            <div class="day-temps" id="saturday">
+                <h3>Saturday</h3>
+                <img src="./imgs/some_sun.png" alt="sunny weather symbol">
+                <h4>some sun</h4>
+                <div class="temp-bar-bottom parent">
+                    <h5 class="temps temp-high">24</h5>
+                    <h5 class="temps temp-low">18</h5>
+                </div>
+            </div><!-- END weekdays-container-->
+        </div>
+        <!--END main-container-->
+        <div id="cookies-notification" class="parent">
+            <!--BEGIN cookies-notification-->
+            <figure id="icon-cookies-notification">
+                <img id="cookie-icon" src="./imgs/cookie.png" alt="cookie">
+            </figure>
+            <div id="text-notification">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies(sadly not the edible ones) to personalize content and ads, to provide social media
+                    features and to analyse our traffic. <a href="#">Read more</a>
+                </p>
+            </div>
+            <button id="cookies-btn" onclick="cookiesHide(cookiesNotice)">I Accept</button>
+        </div>
+        <!--END cookies-notification-->
+
+
+    </div><!-- END main container-->
+    <script src="script.js"></script>
+</body>
+
+</html>

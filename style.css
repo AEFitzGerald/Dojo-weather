@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+
+/*====== GLOBAL STYLES =======*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+html {
+    font-size: 24px;
+}
+
+body {
+    color:rgb(2, 38, 47);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+}
+
+body,
+header,
+#navigation,
+#main-container,
+#cookies-notification {
+    margin: 0 auto;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+h5 {
+    font-size: 2em;
+}
+
+header {
+    background-color:rgb(0, 174, 218);
+    color: whitesmoke;
+    width: 100%;
+}
+
+header,
+#top-bar {
+    min-height: 100px;
+}
+
+#navigation {
+    align-items: center;
+}
+
+#navigation,
+#main-container {
+    width: 70%;
+}
+
+nav ul {
+    font-size: 1.2em;
+    display: flex;
+    gap: 1.5em;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#main-container {
+    gap: 1.3em;
+    flex-direction: column;
+}
+
+#top-bar {
+    align-items: center;
+    border-bottom: thin solid gray;
+    width: 100%;
+}
+
+#temperature-container {
+    align-items: center;
+    gap: .3em;
+    display: flex;
+}
+
+#temperature-container p, 
+#unit-choice  {
+    font-size: .9em;
+}
+
+#weekdays-container {
+    width: 100%;
+}
+
+.day-temps {
+    align-items: center;
+    border: 8px solid rgb(0, 174, 218, 0.3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+.temp-bar-bottom {
+    align-items: center;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.temp-high {
+    color: rgb(185, 0, 0);
+}
+
+.temp-low {
+    color: rgb(0, 177, 221);
+}
+
+/* For daily temps add the degree symbol separate from the number
+Otherwise JavaScipt sees it as NAN*/
+.temp-high::after,
+.temp-low::after {
+    content:"°";
+}
+
+#cookies-notification {
+    align-items: center;
+    background-color: rgb(183, 227, 255);
+    border: 3px solid rgb(2, 38, 47); 
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    width: 70%;
+}
+
+.hide{
+    display: none;
+}
+
+#cookie-icon {
+    width: 100%;
+}
+
+#icon-cookies-notification {
+    padding-left: 30px;
+    width: 6%;
+}
+
+#text-notification {
+    width: 70%;
+}
+
+#cookies-btn {
+    background-color: rgb(34, 190, 230);
+    box-shadow: 5px 5px 10px rgb(66, 61, 61, 0.5);
+    font-size: 1em;
+    padding: 10px 30px;
+    margin-right: 40px;
+}
+
